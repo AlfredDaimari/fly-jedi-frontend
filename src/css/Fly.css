@@ -1,0 +1,39 @@
+.book-flightbtn {
+  color: black;
+  background-color: #ffe81f;
+  font-weight: bold;
+  height: 40px;
+  font-size: 18px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  width: 200px;
+  margin-top: 2%;
+  margin-left: 35%;
+  width: 300px;
+  font-size: 25px;
+  margin-bottom: 2%;
+}
+.book-show-bg{
+  position: absolute;
+  width: 100vw;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  z-index: auto;
+}
+.book-flightbtn-disabled {
+  color: black;
+  background-color: #ffe81f;
+  font-weight: bold;
+  height: 40px;
+  font-size: 18px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  width: 200px;
+  margin-top: 2%;
+  margin-left: 35%;
+  width: 300px;
+  font-size: 25px;
+  margin-bottom: 2%;
+}

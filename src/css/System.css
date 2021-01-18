@@ -1,0 +1,127 @@
+.planet-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+
+  opacity: 0.5;
+  width: 230px;
+  transition: ease-in-out 0.2s;
+}
+
+.planet-container:hover {
+  opacity: 1;
+}
+
+.planet-container-selected {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+
+  opacity: 1;
+  filter: brightness(1.2);
+  width: 230px;
+}
+
+.selected-start {
+  border: 5px yellow dotted;
+  border-radius: 50%;
+  width: 210px;
+  height: 210px;
+
+  animation: linear infinite spin 50s;
+  transition: ease-in-out 0.3s;
+}
+
+.selected-end {
+  border: 5px turquoise dotted;
+  border-radius: 50%;
+  width: 210px;
+  height: 210px;
+
+  animation: linear infinite spin 50s;
+  transition: ease-in-out 0.3s;
+}
+
+.not-selected {
+  border: 5px transparent solid;
+  border-radius: 50%;
+  width: 210px;
+  height: 210px;
+}
+
+#AJK {
+  position: absolute;
+  top: 20vh;
+  left: 15vw;
+}
+#ADR {
+  position: absolute;
+  top: 60vh;
+  left: 17vw;
+}
+#DAG {
+  position: absolute;
+  top: 95vh;
+  left: 12vw;
+}
+#HSP {
+  position: absolute;
+  top: 19vh;
+  left: 69vw;
+}
+#AV7 {
+  position: absolute;
+  top: 95vh;
+  left: 50vw;
+}
+#CST {
+  position: absolute;
+  top: 58vh;
+  left: 55vw;
+}
+#GRL {
+  position: absolute;
+  top: 83vh;
+  left: 70vw;
+}
+
+.h2-unselected {
+  color: yellow;
+  padding: 10px;
+  border: 4px black solid;
+  cursor: pointer;
+  width: 300px;
+}
+
+.h2-start-selected {
+  color: yellow;
+  padding: 10px;
+  border: 4px yellow solid;
+  cursor: pointer;
+  width: 300px;
+}
+
+.h2-destination-selected {
+  color: yellow;
+  padding: 10px;
+  border: 4px turquoise solid;
+  cursor: pointer;
+  width: 300px;
+}
+.systeminput {
+  width: 200px;
+
+  padding: 10px;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: grey;
+  border-radius: 3px;
+  color: rgb(255, 255, 255);
+}
+
+@keyframes spin {
+  100% {
+    transform: rotatez(360deg);
+  }
+}

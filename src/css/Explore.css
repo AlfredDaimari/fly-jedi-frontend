@@ -1,0 +1,25 @@
+.prod-container {
+  margin: 5px;
+  border-top: 1px solid #ffe81f;
+  border-bottom: 1px solid #ffe81f;
+  border-left: 1px solid #ffe81f;
+  border-right: 1px solid #ffe81f;
+  padding: 5px;
+  width:300px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.prod-img {
+  max-height: 480px;
+  max-width: 330px;
+  margin-left: 25%;
+  
+}
+.prod-display {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}

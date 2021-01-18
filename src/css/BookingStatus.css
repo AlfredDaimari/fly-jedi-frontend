@@ -1,0 +1,27 @@
+.book-status-btn {
+  color: black;
+  background-color: #ffe81f;
+  font-weight: bold;
+  height: 50px;
+  font-size: 18px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  width: 200px;
+  margin-top: 15%;
+  margin-left: 6%;
+}
+
+.book-flight-btn:active {
+  border: none;
+}
+.bookstatusinput {
+  width: 40%;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: grey;
+  border-radius: 3px;
+  color: rgb(255, 255, 255);
+  
+}

@@ -1,0 +1,392 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+/*body {
+  background: none;
+}*/
+@keyframes roll {
+  0% {
+    transform: rotate(0);
+    left: 50%;
+  }
+  33% {
+    transform: rotate(800deg);
+    left: 220%;
+  }
+  66% {
+    transform: rotate(-800deg);
+    left: -120%;
+  }
+  100% {
+    transform: rotate(0deg);
+    left: 50%;
+  }
+}
+@keyframes blink {
+  0% {
+    background: #000;
+  }
+  25%,
+  35% {
+    background: #86c9fd;
+  }
+  50%,
+  60% {
+    background: #000;
+  }
+  80% {
+    background: #86c9fd;
+  }
+  100% {
+    background: #000;
+  }
+}
+@keyframes head-bob {
+  0% {
+    transform: rotate(0);
+    right: 0;
+    left: 50%;
+  }
+  33% {
+    transform: rotate(8deg);
+    right: -25px;
+    left: 230%;
+  }
+  66% {
+    transform: rotate(-8deg);
+    right: -25px;
+    left: -130%;
+  }
+  100% {
+    transform: rotate(0);
+    right: 0;
+    left: 50%;
+  }
+}
+@keyframes neck-bob {
+  0% {
+    transform: rotate(0);
+    left: 50%;
+  }
+  33% {
+    transform: rotate(8deg);
+    left: 228%;
+  }
+  66% {
+    transform: rotate(-8deg);
+    left: -128%;
+  }
+  100% {
+    transform: rotate(0);
+    left: 50%;
+  }
+}
+.droid {
+  width: 110px;
+  position: absolute;
+  top: 7%;
+  left: 50%;
+  margin: 25% auto 0;
+  transform: translateY(-50%);
+  background: none;
+  z-index: 2;
+}
+.droid-head {
+  height: 120px;
+  width: 220px;
+  border-bottom: 8px solid #8e8e9c;
+  border-radius: 220px 220px 0 0;
+  position: relative;
+  z-index: 3;
+  left: 50%;
+  margin-left: -110px;
+  background: #fff;
+  overflow: hidden;
+  animation: head-bob 15s ease-in-out infinite;
+}
+.droid-head:before {
+  content: "";
+  display: block;
+  height: 10px;
+  width: 100%;
+  border: 1px solid #000;
+  position: absolute;
+  top: 25px;
+  background: #cd7640;
+}
+.droid-head:after {
+  content: "";
+  display: block;
+  height: 15px;
+  width: 100%;
+  border: 1px solid #000;
+  position: absolute;
+  top: 5px;
+  background: #8e8e9c;
+}
+.droid-head__eye {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 3px solid grey;
+  position: relative;
+  top: 25%;
+  z-index: 10;
+  margin: 0 auto;
+  background: #000;
+  background: radial-gradient(circle at 10px 10px, #414141, #000);
+  box-shadow: 0 0 0 4px #fff, 0 0 0 5px #000, 0 0 0 10px #fff;
+}
+.droid-head__eye--small {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 4px solid #8e8e9c;
+  position: absolute;
+  right: 40px;
+  bottom: 15px;
+  margin: 0 auto;
+  background: #000;
+  background: radial-gradient(circle at 5px 5px, #414141, #000);
+  box-shadow: 0 0 0 3px #fff, 0 0 0 6px #000;
+}
+.droid-head__eye--small:before {
+  content: "";
+  display: block;
+  height: 57px;
+  width: 83px;
+  border: 1px solid #000;
+  border-top-right-radius: 25%;
+  position: relative;
+  top: -15px;
+  left: -44px;
+}
+.droid-head__eye--tiny {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  position: relative;
+  top: 34%;
+  margin: 0 auto;
+  background: #000;
+  box-shadow: 0 0 0 1px #8e8e9c, 0 0 0 2px #000;
+  animation: blink 3s ease-in-out infinite;
+  z-index: 11;
+}
+.droid-head__eye--tiny:before {
+  content: "";
+  display: block;
+  height: 20px;
+  width: 250px;
+  position: absolute;
+  left: -112.5px;
+  bottom: -10px;
+  background: repeating-linear-gradient(
+    to right,
+    transparent,
+    transparent 10px,
+    #cd7640 10px,
+    #cd7640 20px,
+    transparent 10px,
+    transparent 40px,
+    #cd7640 10px,
+    #cd7640 80px,
+    transparent 20px,
+    transparent 200px
+  );
+}
+.droid-neck {
+  border-top: 15px solid #fff;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 5px solid rgba(0, 0, 0, 0.2);
+  width: 220px;
+  position: relative;
+  z-index: 2;
+  left: 50%;
+  margin-left: -110px;
+  margin-bottom: -20px;
+  animation: neck-bob 15s ease-in-out infinite;
+}
+.droid-body {
+  height: 385px;
+  width: 385px;
+  border-radius: 50%;
+  border-color: #cd7640;
+  border-width: 5px;
+  position: relative;
+  left: 50%;
+  margin-left: -192.5px;
+  background: #fff;
+  overflow: hidden;
+  z-index: 1;
+  animation: roll 15s ease-in-out infinite;
+}
+.droid-body:before {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 385px;
+  position: relative;
+  margin: 0 auto;
+  background: #000;
+}
+.droid-body:after {
+  content: "";
+  display: block;
+  width: 385px;
+  height: 1px;
+  position: relative;
+  top: -85%;
+  margin: 0 auto;
+  background: #000;
+}
+.droid-body__panel,
+.droid-body__panel--center,
+.droid-body__panel--center-rotate,
+.droid-body__panel--left,
+.droid-body__panel--left-rotate,
+.droid-body__panel--right,
+.droid-body__panel--right-rotate {
+  position: absolute;
+  height: 240px;
+  width: 240px;
+  border-radius: 50%;
+  border: 35px solid #cd7640;
+  box-shadow: 0 0 0 3px #000, inset 0 0 0 3px #000;
+  z-index: 5;
+}
+.droid-body__panel-decor {
+  height: 35%;
+  width: 35%;
+  border: 2px solid #000;
+  border-radius: 50%;
+  position: relative;
+  top: -67%;
+  margin: 0 auto;
+  background: repeating-linear-gradient(
+    to bottom right,
+    #fff,
+    #fff 25px,
+    #000 25px,
+    #000 26px,
+    #8e8e9c 26px,
+    #8e8e9c 55px,
+    #000 55px,
+    #000 56px
+  );
+}
+.droid-body__panel--center {
+  top: 50%;
+  left: 50%;
+  margin-top: -120px;
+  margin-left: -120px;
+}
+.droid-body__panel--center-rotate {
+  top: 50%;
+  left: 50%;
+  margin-top: -120px;
+  margin-left: -120px;
+  transform: rotate(90deg);
+  background: none;
+  border-color: transparent;
+  box-shadow: none;
+}
+.droid-body__panel--left {
+  top: 50%;
+  left: -20%;
+  margin-top: -120px;
+  margin-left: -120px;
+}
+.droid-body__panel--left-rotate {
+  top: 50%;
+  left: -20%;
+  margin-top: -120px;
+  margin-left: -120px;
+  transform: rotate(90deg);
+  background: none;
+  border-color: transparent;
+  box-shadow: none;
+}
+.droid-body__panel--right {
+  top: 50%;
+  right: -52%;
+  margin-top: -120px;
+  margin-left: -120px;
+}
+.droid-body__panel--right-rotate {
+  top: 50%;
+  right: -52%;
+  margin-top: -120px;
+  margin-left: -120px;
+  transform: rotate(90deg);
+  background: none;
+  border-color: transparent;
+  box-shadow: none;
+}
+.droid-body__panel:before,
+.droid-body__panel--center:before,
+.droid-body__panel--center-rotate:before,
+.droid-body__panel--left:before,
+.droid-body__panel--left-rotate:before,
+.droid-body__panel--right:before,
+.droid-body__panel--right-rotate:before {
+  content: "";
+  display: block;
+  height: 40px;
+  width: 35px;
+  border: 2px solid #000;
+  border-top: none;
+  position: relative;
+  margin: 0 auto;
+  background: #cd7640;
+  transform: perspective(50px) rotateX(-25deg);
+}
+.droid-body__panel:after,
+.droid-body__panel--center:after,
+.droid-body__panel--center-rotate:after,
+.droid-body__panel--left:after,
+.droid-body__panel--left-rotate:after,
+.droid-body__panel--right:after,
+.droid-body__panel--right-rotate:after {
+  content: "";
+  display: block;
+  height: 40px;
+  width: 35px;
+  border: 2px solid #000;
+  border-bottom: none;
+  position: relative;
+  top: 46%;
+  margin: 11px auto;
+  background: #cd7640;
+  transform: perspective(50px) rotateX(25deg);
+}
+
+.bubble {
+  position: relative;
+
+  font-size: 20px;
+  line-height: 24px;
+  width: 300px;
+  background: #ffe81f;
+  border-radius: 40px;
+  padding: 24px;
+  text-align: center;
+  color: black;
+  animation: head-bob 15s ease-in-out infinite;
+}
+
+.bubble-bottom-left:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 20px solid #ffe81f;
+  border-right: 9px solid transparent;
+  border-top: 12px solid #ffe81f;
+  border-bottom: 20px solid transparent;
+  left: 32px;
+  bottom: -24px;
+}

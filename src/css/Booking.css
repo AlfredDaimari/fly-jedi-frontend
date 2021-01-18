@@ -1,0 +1,36 @@
+.trip-id-links {
+  width: 200px;
+
+  text-decoration: none;
+  text-align: center;
+  font-size: x-large;
+  color: #ffe81f;
+  border: 3px solid #ffe81f;
+  border-left: 3px solid #ffe81f;
+  border-right: 3px solid #ffe81f;
+  transition: ease-in-out 0.4s;
+}
+
+.trip-id-links:hover {
+  width: 200px;
+
+  text-decoration: none;
+  text-align: center;
+  font-size: x-large;
+  color: white;
+  border: 3px solid white;
+  border-left: 3px solid white;
+  border-right: 3px solid white;
+  filter: brightness(1.1);
+}
+
+.oth-inf-label {
+  color: white;
+  font-size: large;
+  margin-left: 60px;
+  display: inline;
+}
+
+.book-input {
+  border: 2px #ffe81f solid;
+}

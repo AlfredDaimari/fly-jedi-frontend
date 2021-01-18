@@ -1,0 +1,44 @@
+.header {
+  font-family: "Special Elite", cursive;
+  color: #2f2f2f;
+
+  background-color: black;
+
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+
+  border-bottom: solid 3px #121212;
+  border-top: solid 3px #121212;
+}
+
+.heading {
+  text-decoration: none;
+  color: #ffe81f;
+  font-size: 40px;
+}
+
+.heading-icon {
+  height: 50px;
+  width: auto;
+}
+
+.sign-home-status-container {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.header-links {
+  color: #ffe81f;
+  text-decoration: none;
+  margin-right: 5px;
+  font-size: 21px;
+  transition: ease-in-out 0.3s;
+}
+
+.header-links:hover {
+  color: white;
+  text-decoration: none;
+  margin-right: 5px;
+}

@@ -1,0 +1,50 @@
+.seat {
+  font-size: medium;
+  width: 40px;
+  height: 40px;
+  border: yellowgreen 3px solid;
+  border-radius: 50%;
+  background: whitesmoke;
+  margin: 5px;
+
+  outline-style: none;
+}
+
+.seat:hover {
+  font-size: medium;
+  width: 40px;
+  height: 40px;
+  border: #ffe81f 3px solid;
+  border-radius: 50%;
+  background: white;
+  margin: 5px;
+}
+
+.disabled-seat {
+  font-size: medium;
+  width: 40px;
+  height: 40px;
+  border: whitesmoke 3px solid;
+  border-radius: 50%;
+  background: grey;
+  margin: 5px;
+
+  outline-style: none;
+}
+
+.seat-selected {
+  font-size: medium;
+  width: 40px;
+  height: 40px;
+  border: yellowgreen 3px solid;
+  border-radius: 50%;
+  background: moccasin;
+  margin: 5px;
+
+  outline-style: none;
+}
+
+.seat-info-span {
+  color: white;
+  margin-left: 10px;
+}
